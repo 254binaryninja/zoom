@@ -3,7 +3,7 @@ import React from 'react'
 
 const Loader = () => {
   return (
-    <div className='flex-center h-screeen w-full'>
+    <div className='flex-center justify-center  h-screeen w-full'>
         <Image
          src="/icons/loading-circle.svg"
          alt="loading"

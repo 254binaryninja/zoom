@@ -20,7 +20,7 @@ onClose:()=>void;
 title:string;
 className?:string;
 children?:ReactNode;
-handleClick?:()=>void;
+handleClick:()=>void;
 buttonText?:string;
 image?:string;
 buttonIcon?:string;
@@ -45,7 +45,7 @@ const MeetingModal = ({isOpen,onClose,title,className,children,handleClick,butto
         {title}
       </h1>
       {children}
-      <Button className='bg-blue-1 focus-visible:ring-0 focus-visible:ring-offset-0' onClick={handleClick}>
+      <Button className='bg-blue-1 focus-visible:ring-0 focus-visible:ring-offset-0 cursor-pointer' onClick={handleClick}>
         {buttonIcon && (
             <Image
              src={buttonIcon}
