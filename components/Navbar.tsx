@@ -15,7 +15,7 @@ const Navbar = () => {
         alt="Yoom Logo"
         className='max-sm:size-11'
        />
-       <p className='text-[26px] font-extrabold text-white max-sm:hidden'>Yoom</p>
+       <p className='text-[26px] font-extrabold text-white max-sm:hidden'>Chemist_hub</p>
       </Link>
       <div className='flex-between gap-5'>
         {/* Clerk -User Management */}
