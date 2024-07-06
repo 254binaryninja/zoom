@@ -9,12 +9,12 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet"
+} from "../components/ui/sheet"
 import Image from 'next/image'
 import Link from 'next/link'
-import { sidebarLinks } from '@/constants'
+import { sidebarLinks } from '../constants'
 import { usePathname } from 'next/navigation'
-import { cn } from '@/lib/utils'
+import { cn } from '../lib/utils'
 
 
 const MobileNav = () => {

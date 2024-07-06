@@ -1,4 +1,4 @@
-//@ts-nocheck
+
 
 import { cn } from '../lib/utils';
 import { CallControls, CallingState, CallParticipantsList, CallStatsButton, PaginatedGridLayout, SpeakerLayout, useCallStateHooks } from '@stream-io/video-react-sdk';
@@ -13,7 +13,7 @@ import {
 } from "../components/ui/dropdown-menu"
 import {  Layout, Users } from 'lucide-react';
 import { Button } from './ui/button';
-import { useParams, useRouter } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import EndCall from './EndCall'
 import Loader from './Loader';
 
@@ -21,7 +21,7 @@ import Loader from './Loader';
 type CallLayout = 'grid' | 'speaker-left'|'speaker-right'
 
 const MeetingRoom = () => {
-  const searchParams = useParams();
+  const searchParams = useSearchParams();
   const isPersonal = !!searchParams.get('personal');
   const [layout,setLayout] = useState<CallLayout>('speaker-left');
   const [showParticipants,setShowParticipants] = useState(false);
