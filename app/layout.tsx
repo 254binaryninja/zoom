@@ -11,7 +11,7 @@ import React from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Yoom",
+  title: "Chemist_hub",
   description: "A video confrencing app",
   icons:{
     icon:'/icons/logo.svg'
