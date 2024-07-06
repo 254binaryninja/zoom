@@ -4,7 +4,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import '@stream-io/video-react-sdk/dist/css/styles.css';
 import { Toaster } from "../components/ui/toaster"
-
+import 'react-datepicker/dist/react-datepicker.css'
 import React from "react";
 
 
@@ -13,6 +13,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Yoom",
   description: "A video confrencing app",
+  icons:{
+    icon:'/icons/logo.svg'
+  }
 };
 
 export default function RootLayout({

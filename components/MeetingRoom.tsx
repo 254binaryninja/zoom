@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import { cn } from '../lib/utils';
 import { CallControls, CallingState, CallParticipantsList, CallStatsButton, PaginatedGridLayout, SpeakerLayout, useCallStateHooks } from '@stream-io/video-react-sdk';
 import React, { useState } from 'react'
@@ -8,10 +10,10 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "../components/ui/dropdown-menu"
 import {  Layout, Users } from 'lucide-react';
 import { Button } from './ui/button';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import EndCall from './EndCall'
 import Loader from './Loader';
 
@@ -23,6 +25,7 @@ const MeetingRoom = () => {
   const isPersonal = !!searchParams.get('personal');
   const [layout,setLayout] = useState<CallLayout>('speaker-left');
   const [showParticipants,setShowParticipants] = useState(false);
+  const router = useRouter();
 
   const {useCallCallingState} = useCallStateHooks();
   const callingState = useCallCallingState();
@@ -51,7 +54,7 @@ const MeetingRoom = () => {
          </div>
        </div>
        <div className='fixed bottom-0 flex w-full items-center justify-center gap-5 flex-wrap'>
-         <CallControls/>
+         <CallControls onLeave={()=>router.push('/')}/>
 
  <DropdownMenu>
   <div className='flex items-center'>

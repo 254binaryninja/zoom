@@ -4,9 +4,9 @@ import { StreamCall, StreamTheme } from '@stream-io/video-react-sdk'
 import React, { useState } from 'react'
 import MeetingSetup from '../../../../components/MeetingSetup'
 import MeetingRoom from '../../../../components/MeetingRoom'
-import { useGetCallById } from '@/hooks/useGetCallById'
+import { useGetCallById } from '../../../../hooks/useGetCallById'
 import { useUser } from '@clerk/nextjs'
-import Loader from '@/components/Loader'
+import Loader from '../../../../components/Loader'
 
 const Meeting = ({params : {id}}:{params:{id:string}}) => {
   const {user,isLoaded} = useUser();

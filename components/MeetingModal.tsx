@@ -8,9 +8,9 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
-  } from "@/components/ui/dialog"
+  } from "../components/ui/dialog"
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
+import { cn } from '../lib/utils';
 import { Button } from './ui/button';
   
 
@@ -20,7 +20,7 @@ onClose:()=>void;
 title:string;
 className?:string;
 children?:ReactNode;
-handleClick:()=>void;
+handleClick?:()=>void;
 buttonText?:string;
 image?:string;
 buttonIcon?:string;
